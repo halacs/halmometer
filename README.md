@@ -10,14 +10,14 @@ This project is written in Python on top of [MicroPython](http://micropython.org
 First, you need to assemble the board to have a 200K resistor in between the A0 and 5V ports of the Wemos baseborad. This is how we can measure the battery voltage.
 
 
-With a jumpre wire, connect D0 pin to the RST pin. This is needed to save energy when working from battery: ensure we wake up from the deep slave mode.
+With a jumpre wire, connect D0 pin to the RST pin. This is needed to save energy when working from battery: ensure we wake up from the deep sleep mode.
 
 
-BME280 is the I2C sensor prodides temperature, humidity and air pressure measurements. When you buy it from ebay, take care. there are many seller advertising their item as BME280 but in reality many of them are BMP280 which doesn't provide the humidity value.
+BME280 is the I2C sensor prodides temperature, humidity and air pressure measurements. When you buy it from ebay, take care. There are many seller advertising their item as BME280 but in reality many of them are BMP280 which doesn't provide the humidity value.
 SCL pin of the sensor goes to the D1 pin of the baseborad, while SDA to the D2. GND and VCC are quite strateforward but VCC here must go to 3V3 pin on the baseboard.
 
-Reagrind the battery: I had many issues with the batter capacity in the winter so there is a chance that my batteries are not meets my quailty expectations just the cost...
-This is why I use AC/DC adaptor to feed it. I fond it rock solid this way.
+Reagrind the battery: I had many issues with the battery capacity in the winter so there is a chance that my batteries are not meets quailty expectations just the cost...
+This is why I use AC/DC adaptor to feed it instead of solar panels. I found it rock solid this way.
 
 ### Software
 Download stable image from [MicroPython](http://micropython.org)'s website and flash it with esptool command line tool.
